@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Adoptation from './Components/Adoptation';
+import Adoptation from './Components/Adoptation/Adoptation';
 
 function App() {
   return (
