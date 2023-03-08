@@ -8,16 +8,19 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     display: flex;
     flex-direction: column;
 }
-.logo{
+
+.logo {
     width: 5%;
     padding: 4px;
     border-radius: 7px;
 }
+
 .page-container {
     padding: 10px;
     position: relative;
 
 }
+
 .search-container {
     /* position the search container top right
        set width of placeholder equal to input 
@@ -31,23 +34,27 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     margin-right: 5%;
+
     input {
         width: 28ch;
         padding: 5px;
         font-size: 12px;
         border: none;
         background: transparent;
+
         ::placeholder {
-            font-size: 12px; 
+            font-size: 12px;
         }
     }
 }
+
 .categories-search:focus {
     border: none;
     border-bottom: none;
     outline: none;
-  }
-.categories-title{
+}
+
+.categories-title {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -56,20 +63,23 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     padding: 1%;
     color: $textColor;
 }
+
 .photo-container {
     position: relative;
-    width:100%;
+    width: 100%;
     height: auto;
     margin-top: 50px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    img{
+
+    img {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
 }
+
 .card-container {
     background-color: $backgroundColor;
     border-radius: 5px;
@@ -79,20 +89,24 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     flex-direction: column;
     align-items: center;
     margin: 1%;
+
     h3 {
         color: $textColor;
     }
 }
+
 .card-container :first-child {
     border-radius: 100%;
     padding: 5%;
     background-color: white;
     color: rgb(228, 160, 36);
 }
+
 .categories-section {
     display: flex;
 }
-.add-category{
+
+.add-category {
     background: green;
     border: none;
     border-radius: 5px;
@@ -101,6 +115,7 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     padding: 1%;
     cursor: pointer;
 }
+
 .popup {
     position: fixed;
     top: 50%;
@@ -110,6 +125,13 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     width: 400px;
     padding: 20px;
     border-radius: 8px;
+    z-index: 999;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-
+    transition: 1s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.blur {
+    filter: blur(5px);
+}

@@ -29,13 +29,20 @@ const SingleCategory = () => {
             title: 'Cats'
         }
     ]);
-
+// set popup true to show AddCategoryPopup
     const handleAddCategoryPopup = () => {
         setShowPopup(true);
+    }
+// check if popup active and on out 
+    const handlePopupBlur = (event) => {
+        if (event.target !== <AddCategoryPopup/> && showPopup){
+            setShowPopup(false);
+        }
     }
 
     return (
         <>
+        <div className={showPopup && 'blur'} onClick={handlePopupBlur}>
             <img src={logo} alt='logo' className='logo'></img>
             <div className='page-container'>
                 <button className='add-category' onClick={handleAddCategoryPopup}>Add Category</button>
@@ -50,8 +57,9 @@ const SingleCategory = () => {
             </div>
             <>
                 <CategoryCard category={categories} />
-                <AddCategoryPopup/>
             </>
+        </div>
+                {showPopup && <AddCategoryPopup/>}
         </>
     )
 
