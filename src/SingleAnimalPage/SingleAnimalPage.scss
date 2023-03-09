@@ -1,0 +1,38 @@
+$primary-color: blue;
+$secondary-color: rgb(196, 16, 16);
+
+
+body {
+    background-color: $primary-color;
+}
+
+
+// .container {
+ 
+// }
+
+
+// .container-kryesor {
+
+// }
+
+.carousel {
+    // margin-top: 5%;
+    // margin-bottom: 5%;
+    border-radius: 3%;
+    // max-width: 90%;
+    // max-height: 90%;
+   
+}
+
+.container-2{
+    text-align: left;
+}
+.table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+  }
