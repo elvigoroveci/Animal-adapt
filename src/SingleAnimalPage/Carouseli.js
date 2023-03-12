@@ -63,8 +63,12 @@ function Carouseli() {
                     selectedItem={imageData[currentIndex]}
                     onChange={handleChange}
                     stopOnHover={true}
-                   className="carousel-container">
+                   className="carousel-container"
+
+                   >
                    {renderSlides}
+
+                   
                 </Carousel>
             );
         } 
