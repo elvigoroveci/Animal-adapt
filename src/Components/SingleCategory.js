@@ -7,11 +7,14 @@ import "./singleCategory.scss";
 import logo from '../logo.png'
 import dog from '../cats&dogs.jpg'
 import AddCategoryPopup from './AddCategoryPopup';
-
+import CategoryGrid from './CategoryCard/CategoryGrid';
 
 const SingleCategory = () => {
 
     const [showPopup, setShowPopup] = useState(false);
+    // fix an error on the console for using conditional on classname
+    const [makeBlur, setMakeBlur] = useState('');
+
     const [categories, setCatedories] = useState([
         {
             id: 1,
@@ -29,42 +32,55 @@ const SingleCategory = () => {
             title: 'Cats'
         }
     ]);
-// set popup true to show AddCategoryPopup
+
+    const handleAddCategory = (newCategory) => {
+        const newItem = { id: categories.length + 1, logo: 'doing', title: newCategory }
+        setCatedories([...categories, newItem]);
+        console.log(categories);
+    };
+    // set popup true to show AddCategoryPopup
     const handleAddCategoryPopup = () => {
         setShowPopup(true);
-    }
-// check if popup active and on out 
+        setMakeBlur('blur');
+    };
+    // check if popup active and on outclick disappear
     const handlePopupBlur = (event) => {
-        if (event.target !== <AddCategoryPopup/> && showPopup){
+        if (event.target !== <AddCategoryPopup /> && showPopup) {
             setShowPopup(false);
+            setMakeBlur('');
         }
-    }
+    };
+    // disappear popup after submit
+    const handlePopupOnSubmit = () => {
+        setShowPopup(false);
+        setMakeBlur('');
+    };
 
     return (
         <>
-        <div className={showPopup && 'blur'} onClick={handlePopupBlur}>
-            <img src={logo} alt='logo' className='logo'></img>
-            <div className='page-container'>
-                <button className='add-category' onClick={handleAddCategoryPopup}>Add Category</button>
-                <div className='search-container'>
-                    <SearchIcon />
-                    <input type="search" className="categories-search" placeholder='search your favourite animal...'></input>
+            <div className={makeBlur} onClick={handlePopupBlur}>
+                <img src={logo} alt='logo' className='logo'></img>
+                <div className='page-container'>
+                    <button className='add-category' onClick={handleAddCategoryPopup}>Add Category</button>
+                    <div className='search-container'>
+                        <SearchIcon />
+                        <input type="search" className="categories-search" placeholder='search your favourite animal...'></input>
+                    </div>
+                    <div className='photo-container'>
+                        <h1 className="categories-title">Pet Categories</h1>
+                        <img src={dog} alt="img" ></img>
+                    </div>
                 </div>
-                <div className='photo-container'>
-                    <h1 className="categories-title">Pet Categories</h1>
-                    <img src={dog} alt="img" ></img>
-                </div>
+                <>
+                    <CategoryCard category={categories} />
+                </>
+                <>
+                    <CategoryGrid />
+                </>
             </div>
-            <>
-                <CategoryCard category={categories} />
-            </>
-        </div>
-                {showPopup && <AddCategoryPopup/>}
+            {showPopup && <AddCategoryPopup addCategory={handleAddCategory} showPopup={handlePopupOnSubmit} />}
         </>
     )
-
-
-
 
 }
 
