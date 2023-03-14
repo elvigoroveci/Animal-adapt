@@ -1,14 +1,12 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./SingleAnimalPage.css"
-import { useState } from "react";
 import "./SingleAnimalPage.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carouseli from "./Carouseli";
 import InfotTabela from "./InfotTabela";
 import Ikona from "./Ikonat";
 import Slideshow from "./Slideshow";
-import Cards from "./Cards";
 import { Card } from "react-bootstrap";
 
 
@@ -69,7 +67,7 @@ const SingleAnimalPage =() =>{
 
                 <h2 style={{textAlign: "left", marginTop: 100,}}>Ower lovely customer</h2>
 
-                <div className="container-3 mt-1">
+                <div className="container-3 mt-1">      {/* Permban modelin e pare te fotove */}    
                        
                          <div className="container-1">
                             <div className="row mt-1">
@@ -80,7 +78,7 @@ const SingleAnimalPage =() =>{
                         </div>                          
                  </div>
 
-                 <div className="container-4">
+                 <div className="container-4">       {/* Permban modelin e dyte te fotove te fotove */}   
                     <div className="row">
                         <div className="col">
                         <img id="fotot" src="https://www.tuttogreen.it/wp-content/uploads/2017/05/shutterstock_1018149943.jpg" alt="..." class="img-thumbnail"/>
@@ -92,7 +90,7 @@ const SingleAnimalPage =() =>{
                     </div>
                  </div>
 
-                 <div className="container-5">
+                 <div className="container-5">   {/* Permban kardat per kafshe te */}   
                     <div className="row">
                         <div className="col-sm">
                                 <p style={{textAlign: "left", marginTop: 60, fontSize: 25, fontFamily: "fantasy",}}>Whats new?</p>

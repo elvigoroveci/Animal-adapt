@@ -55,7 +55,6 @@ function Carouseli() {
                 function handleChange(index) {
                     setCurrentIndex(index);
                 }
-
                 return (   
                 <Carousel showArrows={true}
                     autoPlay={true}
@@ -64,11 +63,9 @@ function Carouseli() {
                     onChange={handleChange}
                     stopOnHover={true}
                    className="carousel-container"
-
                    >
                    {renderSlides}
 
-                   
                 </Carousel>
             );
         } 

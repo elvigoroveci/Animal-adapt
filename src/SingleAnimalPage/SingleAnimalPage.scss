@@ -1,19 +1,15 @@
 $primary-color: blue;
 $secondary-color: rgb(196, 16, 16);
 
-
-
-
-
 body {
     background-color: $primary-color;
 }
 
 .carousel {
     border-radius: 3%;
-    :hover{
-        box-shadow: 10px 10px 20px #ccc;
-    }
+    // :hover{
+    //     box-shadow: 10px 10px 20px #ccc;
+    // }
 }
 
 
