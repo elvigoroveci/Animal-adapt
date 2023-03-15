@@ -1,17 +1,25 @@
+import { useState } from 'react';
 import './singleCategory.scss';
 const AddCategoryPopup = () => {
 
+    const [userInput,setUserInput] = useState('');
 
+    const handleUserInput = (e) => {
+        setUserInput(e.target.value)
+    };
+
+    console.log(userInput);
+    
     return (
         <div className="popup">
             <h3>Select new category</h3>
-            <select>
-                <option>Squirrel</option>
-                <option>Fish</option>
-                <option>Horse</option>
-                <option>Snakes</option>
+            <select value={userInput} onChange={handleUserInput}>
+                <option value='Squirrel'>Squirrel</option>
+                <option value='Fish'>Fish</option>
+                <option value='Horse'>Horse</option>
+                <option value='Snakes'>Snakes</option>
             </select>
-            <button className='add-category'>Submit</button>
+            <button type='submit' className='add-category' >Submit</button>
         </div>
     )
 

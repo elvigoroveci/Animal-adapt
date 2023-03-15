@@ -38,7 +38,11 @@ const SingleCategory = () => {
         if (event.target !== <AddCategoryPopup/> && showPopup){
             setShowPopup(false);
         }
-    }
+    };
+
+   const handleAddCategory = () => {
+            setCatedories(...categories);
+   };
 
     return (
         <>
@@ -59,7 +63,7 @@ const SingleCategory = () => {
                 <CategoryCard category={categories} />
             </>
         </div>
-                {showPopup && <AddCategoryPopup/>}
+                {showPopup && <AddCategoryPopup data={handleAddCategory}/>}
         </>
     )
 
