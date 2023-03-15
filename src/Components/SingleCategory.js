@@ -50,11 +50,15 @@ const SingleCategory = () => {
             setMakeBlur('');
         }
     }
-
+    //disappear Popup after submit
     const handlePopupOnSubmit = () => {
         setShowPopup(false);
-            setMakeBlur('');
+        setMakeBlur('');
     }
+
+    
+
+  
 
     return (
         <>
@@ -73,7 +77,7 @@ const SingleCategory = () => {
                 </div>
             </div>
             <>
-                <CategoryCard category={categories} />
+                <CategoryCard category={categories}/>
             </>
             <>
                 <CategoryGrid/>

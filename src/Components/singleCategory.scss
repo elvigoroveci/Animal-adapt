@@ -93,6 +93,9 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     h3 {
         color: $textColor;
     }
+    :hover{
+        cursor: pointer;
+    }
 }
 
 .card-container :first-child {
@@ -145,3 +148,9 @@ $bodybackgroundColor: linear-gradient(102.87deg, rgba(252, 238, 213, 0.6) 6.43%,
     flex-basis: calc(20% - 10px);
     margin-bottom: 20px;
   }
+  
+.selected{
+    box-shadow: -1px 1px 15px 6px rgba(233, 116, 70, 0.86);
+    -webkit-box-shadow: -1px 1px 15px 6px rgba(233, 116, 70, 0.86);
+    -moz-box-shadow: -1px 1px 15px 6px rgba(233, 116, 70, 0.86);
+}
