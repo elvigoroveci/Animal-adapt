@@ -70,8 +70,9 @@ const SingleCategory = () => {
             <>
                 <CategoryCard category={categories} />
             </>
-        </div>
+        <>
                 {showPopup && <AddCategoryPopup/>}
+                </>
         </>
     )
 
