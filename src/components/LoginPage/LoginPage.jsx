@@ -6,6 +6,30 @@ import vkSocial from "../../images/vk-social.png";
 import dogImg from "../../images/dog-img.jpg";
 
 const LoginPage = () => {
+  const handleSignUp = () => {
+    const inputFields = document.querySelectorAll(".input-group input");
+    let hasEmptyFields = false;
+
+    inputFields.forEach((input) => {
+      if (input.value === "") {
+        hasEmptyFields = true;
+      }
+    });
+
+    const passwordInput = document.querySelector('input[type="password"]');
+    const passwordPattern = /^(?=.*?[^\w\s]).{8,}$/;
+
+    if (hasEmptyFields) {
+      alert("Please fill in all the required fields");
+    } else if (!passwordPattern.test(passwordInput.value)) {
+      alert(
+        "Password must be at least 8 characters long and contain a special character"
+      );
+    } else {
+      alert("Sign up successful!");
+    }
+  };
+
   return (
     <>
       <div className="register-page">
@@ -39,7 +63,7 @@ const LoginPage = () => {
             <input className="checkbox" type="checkbox" />I agree to{""}
             <span>Terms</span> and{""} <span>Privacy Policy</span>
           </h2>
-          <button className="btn" type="submit">
+          <button className="btn" type="submit" onClick={handleSignUp}>
             Sign Up
           </button>
         </div>

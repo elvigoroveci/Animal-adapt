@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.register-page {
+  display: flex;
+  justify-content: center;
+}
+.register-page .signup {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+.register-page .header {
+  text-align: center;
+  color: #2465cf;
+}
+.register-page .socials {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  width: auto;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.register-page .socials img {
+  height: 30px;
+}
+.register-page .input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 20px;
+}
+.register-page .input-group input {
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  background-color: #ececec;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.register-page .input-group input:focus {
+  border: 1px solid #2465cf;
+  color: #2465cf;
+}
+.register-page .checkbox {
+  height: 25px;
+  width: 25px;
+  outline: none;
+  margin: 10px;
+}
+.register-page span {
+  color: #2465cf;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #2465cf;
+  color: white;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+.btn:hover {
+  background-color: #e9e9e9;
+  color: #2465cf;
+  cursor: pointer;
+}/*# sourceMappingURL=LoginPage.css.map */
