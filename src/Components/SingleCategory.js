@@ -51,6 +51,11 @@ const SingleCategory = () => {
         }
     }
 
+    const handlePopupOnSubmit = () => {
+        setShowPopup(false);
+            setMakeBlur('');
+    }
+
     return (
         <>
             <div className={makeBlur} onClick={handlePopupBlur}>
@@ -71,7 +76,7 @@ const SingleCategory = () => {
                 <CategoryCard category={categories} />
             </>
         <>
-                {showPopup && <AddCategoryPopup/>}
+                {showPopup && <AddCategoryPopup addCategory={handleAddCategory} showPopup={handlePopupOnSubmit}/>}
                 </>
         </>
     )
