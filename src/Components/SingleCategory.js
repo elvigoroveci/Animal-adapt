@@ -75,6 +75,9 @@ const SingleCategory = () => {
             <>
                 <CategoryCard category={categories} />
             </>
+            <>
+                <CategoryGrid/>
+            </>
         <>
                 {showPopup && <AddCategoryPopup addCategory={handleAddCategory} showPopup={handlePopupOnSubmit}/>}
                 </>
