@@ -3,6 +3,7 @@ import "./Adoptation.scss"
 
 
 const Adoptation = () =>{
+    const [userInput,setUserInput] = useState('');
     const [Popup, setPopup] = useState(false);
     const [DataInputArr, setDataInputArr] = useState([]);
     const [DataInput, SetDataInput] = useState({
@@ -14,7 +15,7 @@ const Adoptation = () =>{
     });
 
     const ChangeEvent = (e) =>{
-        SetDataInput({...DataInput,[e.target.name]: e.target.value})
+        SetDataInput({...DataInput,[e.target.name]: e.target.value,[e.target.lastname]:e.target.value,[e.target.email]:e.target.value})
     }
 
     let {name,lastname,email,location,age} = DataInput;
@@ -35,17 +36,17 @@ const Adoptation = () =>{
         </div>    
             {Popup ? 
             <div className="PopUp"> 
-                <div className="UserData">
-                    <input type="text" autoComplete="off" placeholder="Name" name='Name' value={DataInput.name} onChange={ChangeEvent}/>
-                    <input type="text" autoComplete="off" placeholder="Lastname" name='Lastname' value={DataInput.lastname} onChange={ChangeEvent}/>
-                    <input type="text" autoComplete="off" placeholder="Email" name='Email' value={DataInput.email} onChange={ChangeEvent}/>
-                    <input type="text" autoComplete="off" placeholder="Enter Your Location" name='Location' value={DataInput.location} onChange={ChangeEvent}/>
-                    <input type="number" autoComplete="off" placeholder="Age" name='Age' value={DataInput.age} onChange={ChangeEvent}/>
+                <form className="UserData" >
+                    <input type="text"  placeholder="Name" name='Name'/>
+                    <input type="text"  placeholder="Lastname" name='Lastname'/>
+                    <input type="text"  placeholder="Email" name='Email' />
+                    <input type="text"  placeholder="Enter Your Location" name='Location' />
+                    <input type="number" placeholder="Age" name='Age'/>
                     <div className="buttons">
                         <button className="ClosePopup" onClick={() => setPopup(false)}>Cancel</button>    
                         <button type="submit" className="Adopt" onClick={ChangeHandle}>Adopt</button>
                     </div>
-                </div>    
+                </form>    
             </div> 
             : ""}
 
