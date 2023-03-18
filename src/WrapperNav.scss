@@ -1,0 +1,59 @@
+.Full-Wrapper {
+  //   background: aquamarine;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+}
+.Component-Inside-Wrapper {
+  display: flex;
+}
+
+.Main-Div-Wrapper {
+  display: flex;
+  align-content: center;
+  //   background-color: violet;
+  gap: 0px;
+  flex-direction: column;
+  padding-bottom: 246.59px;
+  padding-left: 107.4px;
+}
+
+.Div-photo {
+  display: flex;
+  padding-bottom: 39px;
+  //   background-color: rgb(255, 0, 13);
+}
+// .photo-home {
+//   //   background-color: black;
+// }
+.text-first {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 49.5687px;
+  line-height: 56px;
+  text-transform: capitalize;
+  color: #002a48;
+  width: 385px;
+  height: 57px;
+}
+.text-second {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38.0026px;
+  line-height: 50px;
+  text-transform: capitalize;
+  color: #002a48;
+}
+.paragraph {
+  width: 396.55px;
+  height: 30px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9.91373px;
+  line-height: 15px;
+  color: #242b33;
+}
