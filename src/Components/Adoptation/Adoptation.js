@@ -10,7 +10,7 @@ const Adoptation = () =>{
         lastname:"",
         email: "",
         location: "",
-        age: ""
+        age: 0
     });
 
     const ChangeEvent = (e) =>{
