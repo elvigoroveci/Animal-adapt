@@ -21,27 +21,44 @@ function RegisterNewPet() {
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom01">
+        <Form.Group as={Col} md="12" controlId="validationCustom01">
           <Form.Label>Name</Form.Label>
           <Form.Control
             required
             type="text"
             placeholder="Animal name"
-            defaultValue="Dogy"
-          />
+            defaultValue="Dogy"/>
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="40" controlId="validationCustom02">
+        <Form.Group as={Col} md="12" controlId="validationCustom01">
+          <Form.Label>Breed</Form.Label>
+          <Form.Control
+            required
+            type="text"
+            placeholder="Animal name"
+            defaultValue="Husky"/>
+          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group as={Col} md="12" controlId="validationCustom02">
           <Form.Label>Age</Form.Label>
           <Form.Control
             required
             type="age"
             placeholder="2"
-            defaultValue="Otto"
+            defaultValue="2"/>
+          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group as={Col} md="12" controlId="validationCustom01">
+          <Form.Label>Color</Form.Label>
+          <Form.Control
+            required
+            type="text"
+            placeholder="Animal name"
+            defaultValue="Gray"
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="4" controlId="validationCustomUsername">
+        {/* <Form.Group as={Col} md="12" controlId="validationCustomUsername">
           <Form.Label>Gender</Form.Label>
           <InputGroup hasValidation>
             <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
@@ -54,7 +71,7 @@ function RegisterNewPet() {
               Please choose a username.
             </Form.Control.Feedback>
           </InputGroup>
-        </Form.Group>
+        </Form.Group> */}
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} md="6" controlId="validationCustom03">
