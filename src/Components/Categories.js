@@ -4,8 +4,8 @@ import PetsIcon from '@mui/icons-material/Pets';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import CategoryCard from './CategoryCard/CategoryCard';
 import "./Categories.scss";
-import logo from '../logo.png'
-import dog from '../cats&dogs.jpg'
+import logo from '../assets/img/logo.png'
+import dog from '../assets/img/cats&dogs.jpg'
 import AddCategoryPopup from './AddCategoryPopup';
 import CategoryGrid from './CategoryCard/CategoryGrid';
 
