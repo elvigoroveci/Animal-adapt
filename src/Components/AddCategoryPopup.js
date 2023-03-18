@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './singleCategory.scss';
+import './Categories.scss';
 const AddCategoryPopup = (props) => {
 
     const [userInput, setUserInput] = useState('');

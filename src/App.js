@@ -1,10 +1,14 @@
-import SingleCategory from "./Components/SingleCategory";
+import Categories from "./Components/Categories";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="body-container">
-      <SingleCategory />
-    </div>
+    <BrowserRouter className="body-container">
+      <Routes>
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

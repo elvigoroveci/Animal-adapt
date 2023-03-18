@@ -3,13 +3,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import PetsIcon from '@mui/icons-material/Pets';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import CategoryCard from './CategoryCard/CategoryCard';
-import "./singleCategory.scss";
+import "./Categories.scss";
 import logo from '../logo.png'
 import dog from '../cats&dogs.jpg'
 import AddCategoryPopup from './AddCategoryPopup';
 import CategoryGrid from './CategoryCard/CategoryGrid';
 
-const SingleCategory = () => {
+const Categories = () => {
 
     const [showPopup, setShowPopup] = useState(false);
     // fix an error on the console for using conditional on classname
@@ -90,4 +90,4 @@ const SingleCategory = () => {
 
 }
 
-export default SingleCategory;
+export default Categories;
