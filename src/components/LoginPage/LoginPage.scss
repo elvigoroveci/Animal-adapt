@@ -38,6 +38,11 @@
     margin: 30px;
     gap: 20px;
 
+    .error {
+      color: red;
+      font-size: 1rem;
+    }
+
     input {
       outline: none;
       border-radius: 10px;
