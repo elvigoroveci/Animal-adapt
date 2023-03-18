@@ -5,13 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LoginPage />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
