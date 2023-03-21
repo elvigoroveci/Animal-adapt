@@ -4,7 +4,7 @@ localStorage = new LocalStorage('./scratch')
 const initial_pets = require('./initialData/pets');
 const initial_categories = require('./initialData/categories');
 const LS = require('./helpers/localStorage');
-const categories = require('./initialData/categories');
+
 
 const app = express()
 app.use(express.json())
@@ -24,11 +24,12 @@ app.get('/', (req, res) => {
 
 let pets = LS.all('pets');
 
-console.log(`produktet ne local storage ne momentin qe serveri ndizet: ${pets.length}`)
-
+console.log(`produktet ne local storage ne momentin qe serveri ndizet: ${pets.length}`);
 if (pets.length === 0) {
   LS.addALL('pets', initial_pets);
 }
+
+let categories = LS.all('categories');
 
 if (categories.length === 0) {
     LS.addALL('categories', initial_categories);
@@ -50,7 +51,6 @@ app.get('/api/pets/:petsId', (req, res) => {
 
 app.post('/api/pets', (req, res) => {
   const created_product = LS.create('pets', req.body);
-  console.log(req.body);
   res.json({
     "status": "success",
     "data": created_product

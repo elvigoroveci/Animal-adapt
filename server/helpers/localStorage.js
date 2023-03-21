@@ -1,7 +1,27 @@
 const { LocalStorage } = require('node-localstorage');
 localStorage = new LocalStorage('./scratch')
 
+/**
+ * constrsuctor to be added with required fields
+ */
+// class Pet {
+//   constructor(id, category, name, breed) {
+//     this.id = id;
+//     this.category = category;
+//     this.name = name;
+//     this.breed = breed;
+//   }
+//   static addPet(pets, category, name, breed) {
+//     const newId = Math.max(...pets.map(pet => pet.id), 0) + 1;
+//     const newPet = new Pet(newId, category, name, breed);
+//     pets.push(newPet);
+//     localStorage.setItem('pets', JSON.stringify(pets));
+//   }
+// }
+
 const LS = {
+
+  addPet:Pet,
   /**
    * Get all items of a given model
    * 
