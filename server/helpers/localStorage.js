@@ -1,6 +1,28 @@
 const { LocalStorage } = require('node-localstorage');
 localStorage = new LocalStorage('./scratch')
 
+/**
+ * constrsuctor to be added with required fields
+ */
+// class Pets {
+//   constructor(category, name, breed) {
+//     this.category = category;
+//     this.name = name;
+//     this.breed = breed;
+//   }
+
+//   addNewItem() {
+//     let items = JSON.parse(localStorage.getItem(this.category)) || [];
+//     let newItem = {
+//       id: items.length + 1,
+//       name: this.name,
+//       breed: this.breed
+//     };
+//     items.push(newItem);
+//     localStorage.setItem(this.category, JSON.stringify(items));
+//   }
+// }
+
 const LS = {
 
   
@@ -67,7 +89,6 @@ const LS = {
     let items = LS.all(model);
     let deleted = items.findIndex((i) => i.id == id);
     items.splice(deleted,1);
-    console.log(items);
     return localStorage.setItem(model,JSON.stringify(items));
 
   }

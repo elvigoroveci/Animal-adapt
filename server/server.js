@@ -88,7 +88,6 @@ app.listen(port, () => {
 
 let users = USERS.all('users');
 
-
 if (users.length === 0) {
   USERS.addALL('users', initial_users);
 }

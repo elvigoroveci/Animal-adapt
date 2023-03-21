@@ -67,7 +67,6 @@ const USERS = {
     let users = USERS.all(model);
     let deleted = users.findIndex((i) => i.id == id);
     users.splice(deleted,1);
-    console.log(users);
     return localStorage.setItem(model,JSON.stringify(users));
 
   }
