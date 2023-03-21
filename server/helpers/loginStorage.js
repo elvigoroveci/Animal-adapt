@@ -1,8 +1,8 @@
 const { LocalStorage } = require('node-localstorage');
-localStorage = new LocalStorage('./scratch')
+const loginStorage = new LocalStorage('./users');
 
-const LS = {
 
+const USERS = {
   
   /**
    * Get all items of a given model
@@ -35,9 +35,9 @@ const LS = {
    * @returns {object} item
    */
   find: (model, id) => {
-    const items = LS.all(model);
+    const user = USERS.all(model);
 
-    return items.find((i) => i.id == id);
+    return user.find((i) => i.id == id);
   },
 
   /**
@@ -46,13 +46,13 @@ const LS = {
    * @param {object} data 
    */
   create: (model, data) => {
-    let items = LS.all(model);
+    let user = USERS.all(model);
 
-    data.id = Math.max(...items.map(i => i.id)) + 1;
+    data.id = Math.max(...user.map(i => i.id)) + 1;
 
-    items.push(data);
+    user.push(data);
     
-    LS.addALL(model, items);
+    USERS.addALL(model, user);
 
     return data;
   },
@@ -64,13 +64,13 @@ const LS = {
    * @returns {string} newModel
    */
   delete: (model,id) =>{
-    let items = LS.all(model);
-    let deleted = items.findIndex((i) => i.id == id);
-    items.splice(deleted,1);
-    console.log(items);
-    return localStorage.setItem(model,JSON.stringify(items));
+    let users = USERS.all(model);
+    let deleted = users.findIndex((i) => i.id == id);
+    users.splice(deleted,1);
+    console.log(users);
+    return localStorage.setItem(model,JSON.stringify(users));
 
   }
 }
 
-module.exports = LS;
+module.exports = USERS;

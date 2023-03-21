@@ -1,14 +1,17 @@
 const express = require('express');
 const { LocalStorage } = require('node-localstorage');
-localStorage = new LocalStorage('./scratch')
+localStorage = new LocalStorage('./scratch');
+const loginStorage = new LocalStorage('./users');
 const initial_pets = require('./initialData/pets');
 const initial_categories = require('./initialData/categories');
+const initial_users = require('./initialData/users')
 const LS = require('./helpers/localStorage');
+const USERS = require('./helpers/loginStorage');
 
 
 const app = express()
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 const port = 5000;
 
 // this is important to disable cors
@@ -24,7 +27,6 @@ app.get('/', (req, res) => {
 
 let pets = LS.all('pets');
 
-console.log(`produktet ne local storage ne momentin qe serveri ndizet: ${pets.length}`);
 if (pets.length === 0) {
   LS.addALL('pets', initial_pets);
 }
@@ -32,7 +34,7 @@ if (pets.length === 0) {
 let categories = LS.all('categories');
 
 if (categories.length === 0) {
-    LS.addALL('categories', initial_categories);
+  LS.addALL('categories', initial_categories);
 }
 
 app.get('/api/pets', (req, res) => {
@@ -57,6 +59,14 @@ app.post('/api/pets', (req, res) => {
   })
 })
 
+app.delete('/api/pets/:petsId', (req, res) => {
+  const remaining = LS.delete('pets', req.params.petsId);
+  res.json({
+    "status": "success",
+    "data": remaining
+  })
+})
+
 app.get('/api/categories', (req, res) => {
   res.json({
     "status": "success",
@@ -73,5 +83,27 @@ app.post('/api/categories', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Listening on port ${port}`)
+})
+
+let users = USERS.all('users');
+
+
+if (users.length === 0) {
+  USERS.addALL('users', initial_users);
+}
+
+app.get('/api/users', (req, res) => {
+  res.json({
+    "status": "success",
+    "data": USERS.all('users')
+  })
+
+app.post('/api/register', (req, res) => {
+    const create_user = USERS.create('users', req.body);
+    res.json({
+      "status": 'registered',
+      "data": create_user
+    })
+  })
 })
