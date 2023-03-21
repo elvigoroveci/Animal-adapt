@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Badge } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import RegisterNewPet from './RegisterNewPet';
@@ -19,7 +18,7 @@ function AnimalCreationPopup () {
       <Button className="rounded-pill btn-success btn-hover-border-shade-amount" onClick={handleShow} 
         style={{
             marginTop: 100,
-            width: 500,
+            width: 400,
             height: 60,
             fontSize: 30}}>
             Register a new Pet!!!
@@ -36,7 +35,7 @@ function AnimalCreationPopup () {
           <Button  variant="secondary" className="rounded-pill bg-light text-dark " onClick={handleClose}>
             Close
           </Button>
-          <Button variant="secondary" className="rounded-pill bg-success btn-lg btn-hover-border-shade-amount" onClick={handleClose}>
+          <Button variant="primary" className="rounded-pill bg-success btn-lg btn-hover-border-shade-amount" onClick={handleClose}>
             Save Changes
           </Button>
         </Modal.Footer>
