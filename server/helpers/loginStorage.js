@@ -1,9 +1,9 @@
 const { LocalStorage } = require('node-localstorage');
-const loginStorage = new LocalStorage('./users');
+const loginStorage = new LocalStorage('./usersList');
 
 
 const USERS = {
-  
+
   /**
    * Get all items of a given model
    * 
@@ -11,7 +11,7 @@ const USERS = {
    * @returns array
    */
   all: (model) => {
-    return JSON.parse(localStorage.getItem(model) || '[]');
+    return JSON.parse(loginStorage.getItem(model) || '[]');
   },
 
   /**
@@ -23,7 +23,7 @@ const USERS = {
    * @returns {void}
    */
   addALL: (model, items) => {
-    return localStorage.setItem(model, JSON.stringify(items));
+    return loginStorage.setItem(model, JSON.stringify(items));
   },
 
   /**
@@ -34,10 +34,20 @@ const USERS = {
    * 
    * @returns {object} item
    */
-  find: (model, id) => {
-    const user = USERS.all(model);
+  find: (model, data) => {
+    const users = USERS.all(model);
 
-    return user.find((i) => i.id == id);
+    const user = users.find((i) => i.user == data.user);
+
+    if (user !== undefined &&  user.password == data.password) {
+      
+      return user;
+
+    } else if (user == undefined || user.password !== data.password) {
+      
+      return JSON.stringify({ message: 'wrong username or password' });
+    }
+
   },
 
   /**
@@ -51,7 +61,7 @@ const USERS = {
     data.id = Math.max(...user.map(i => i.id)) + 1;
 
     user.push(data);
-    
+
     USERS.addALL(model, user);
 
     return data;
@@ -63,11 +73,12 @@ const USERS = {
    * @param {number} id 
    * @returns {string} newModel
    */
-  delete: (model,id) =>{
+  delete: (model, id) => {
     let users = USERS.all(model);
     let deleted = users.findIndex((i) => i.id == id);
-    users.splice(deleted,1);
-    return localStorage.setItem(model,JSON.stringify(users));
+    console.log(deleted);
+    users.splice(deleted, 1);
+    return loginStorage.setItem(model, JSON.stringify(users));
 
   }
 }

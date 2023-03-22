@@ -3,7 +3,7 @@ module.exports = [
     id: 1,
     category:'Dogs',
     name: 'Dog 1',
-    breed:'Deltari Ilir'
+    breed:'Deltari Ilir',
   },
   {
     id: 2,
