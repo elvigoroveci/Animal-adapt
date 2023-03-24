@@ -1,0 +1,68 @@
+.Navbar-Jumbotron {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 1366px;
+  height: 574.17px;
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
+}
+
+.Nav-Bar {
+  display: flex;
+  width: 100%;
+  padding-bottom: 0%;
+  // background-color: red;
+  // align-items: center;
+  // justify-content: center;
+  // text-align: center;
+}
+.Under-Navbar {
+  display: flex;
+}
+.Text-Wrapper {
+  padding-top: 4%;
+  display: flex;
+  padding-left: 6%;
+  flex-direction: column; //   background-color: rgb(255, 0, 13);
+}
+.Photo-Wrapper {
+  display: flex;
+}
+// .photo-home {
+//   //   background-color: black;
+// }
+.First-Text {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 49.5687px;
+  line-height: 56px;
+  text-transform: capitalize;
+  color: #002a48;
+}
+.Second-Text {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38.0026px;
+  line-height: 50px;
+  text-transform: capitalize;
+  color: #002a48;
+}
+.Third-Text {
+  height: 30px;
+  width: 396.54x;
+
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9.91373px;
+  line-height: 15px;
+  color: #242b33;
+}

@@ -1,0 +1,102 @@
+$desktop: 1200px;
+$laptop: 992px;
+$tablet: 768px;
+$phone: 480px;
+.navbari {
+  max-width: 1366px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 123.4px;
+  padding-left: 110.4px;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.navbar__logo {
+  display: flex;
+  width: 6.25rem;
+  height: 4.875rem;
+}
+.navbar__menu {
+  padding-top: 0.3rem;
+  width: 29.7rem;
+  flex-direction: row;
+  display: flex;
+  list-style-type: none;
+  padding-left: 4.914375rem;
+  gap: 4.55rem;
+  li {
+    width: 2.85rem;
+    height: 1.25rem;
+
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0.82614375rem;
+    /* identical to box height, or 150% */
+
+    /* Primary Color/Dark Blue */
+    font-size: 0.82614375rem;
+    color: #003459;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.navbar__search {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+  padding-right: 4.9rem;
+  input {
+    width: 14.4575rem;
+    height: 2.301875rem;
+    border-radius: 2.3751625rem;
+    padding: 0rem;
+    border: none;
+    ::placeholder {
+      padding-left: 1rem;
+      width: 8rem;
+      height: 1.133rem;
+
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.722rem;
+      line-height: 1.133rem;
+      color: #99a2a5;
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
+}
+.navbar__login {
+  display: flex;
+  width: 9.294rem;
+  height: 2.272rem;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0.723875rem 1.44575rem 0.51634rem;
+  border-radius: 2.9431rem;
+  line-height: 1.25rem;
+  border: none;
+  background: #003459;
+}
+.navbar__login-text {
+  text-decoration: none;
+  color: #fdfdfd;
+  display: flex;
+  font-weight: 500;
+  font-size: 0.825625rem;
+  font-style: normal;
+}

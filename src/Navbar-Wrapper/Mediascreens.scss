@@ -1,0 +1,236 @@
+$desktop: 1200px;
+$laptop: 992px;
+$tablet: 768px;
+$phone: 480px;
+
+@media screen and (max-width: 1366px) and (min-width: $desktop) {
+  .navbar__toggle {
+    display: none;
+  }
+  .navbari {
+    padding-right: 123.4px;
+  }
+  .navbar__search {
+    padding-left: 2%;
+    padding-right: 3.65%;
+  }
+
+  .nav .navbar__login {
+  }
+}
+@media screen and (max-width: $desktop) and (min-width: $tablet) {
+  .navbari {
+  }
+  .navbar__toggle {
+    display: none;
+  }
+  .navbar__menu li:nth-of-type(2) {
+    padding-right: 8%;
+  }
+  .navbar__menu {
+    margin-right: 2%;
+    width: 50%;
+    padding-left: 0%;
+    gap: 1%;
+    display: flex;
+    justify-content: space-between;
+    li {
+      flex-wrap: wrap;
+    }
+  }
+  .navbar__search {
+    padding-right: 0;
+    input {
+      width: fit-content;
+      padding-right: 1%;
+      ::placeholder {
+        padding-left: 0%;
+      }
+    }
+    .navbar__login {
+      //width: 8%;
+    }
+  }
+}
+@media screen and (max-width: $tablet) and (min-width: 0rem) {
+  .navbari {
+    display: flex;
+    padding-top: 3%;
+    padding-left: 0%;
+    width: 100%;
+    margin-top: -0.8125rem;
+    align-items: center;
+    align-content: space-between;
+  }
+
+  .navbar__menu {
+    display: none; // hide the menu by default
+  }
+  .navbar__search {
+    display: none; // hide the search bar by default
+  }
+  .navbar__login {
+    display: none; // hide the login button by default
+  }
+  .navbar__toggle {
+    display: flex; // show the toggle button
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url("./Menu-Toggle-Hamburger.svg") center/contain no-repeat;
+  }
+  // hide the menu when the toggle button is clicked
+  .navbar__toggle.active + .navbar__menu {
+    display: none;
+  }
+  // hide the search bar when the toggle button is clicked
+  .navbar__toggle.active + .navbar__search {
+    display: none;
+  }
+  // hide the login button when the toggle button is clicked
+  .navbar__toggle.active + .navbar__login {
+    display: none;
+  }
+  .navbari {
+    display: flex;
+    padding-top: 3%;
+    padding-left: 0%;
+    margin-top: -0.8125rem;
+    align-items: center;
+    align-content: space-between;
+  }
+  .navbar__menu.active {
+    flex-direction: column;
+    display: flex;
+    list-style-type: none;
+    padding-top: 9%;
+
+    li {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      line-height: 0.82614375rem;
+      font-size: 2.82614375rem;
+      color: #003459;
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .navbar__toggle.active + .navbar__search.active {
+    display: block;
+  }
+  .navbar__toggle {
+    order: 1;
+    padding-right: 39%;
+    width: 0.8956rem;
+    height: 0.6394rem;
+  }
+  .navbar__logo {
+    padding-left: 16%;
+    height: 4.2925rem;
+    width: 4.375rem;
+    order: 2;
+  }
+  .navbar__logo.active {
+    display: none;
+  }
+
+  .navbar__menu.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+  }
+  .navbar__toggle {
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar__toggle.active {
+    transform: rotate(90deg);
+  }
+  .navbar__searchii {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(
+      102.87deg,
+      #fceed5 6.43%,
+      #fceed5 78.33%,
+      #ffe7ba 104.24%
+    );
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    input::placeholder {
+      color: transparent;
+    }
+
+    &:hover {
+      background: linear-gradient(
+        102.87deg,
+        #fceed5 6.43%,
+        #fceed5 78.33%,
+        #ffe7ba 104.24%
+      );
+    }
+  }
+
+  .navbar__searchii.active {
+    width: 200px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+
+    input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+
+    }
+  }
+
+  .navbar__searchii i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+
+  .navbar__search input {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+  /* Search bar styles */
+
+  .navbar__toggle.active + .navbar__menu.navbar__menu.active {
+    margin-top: 0%;
+    position: fixed;
+    padding-left: 1%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+      102.87deg,
+      #fceed5 6.43%,
+      #fceed5 78.33%,
+      #ffe7ba 104.24%
+    );
+    column-gap: 1%;
+  }
+}
