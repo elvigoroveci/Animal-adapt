@@ -1,17 +1,14 @@
-import WrapperNav from "./WrapperNav";
-import "./MenuMain.scss";
-import "./WrapperNav.scss";
-import FooterWrapper from "./FooterWrapper/FooterWrapper";
-import "./FooterWrapper/FooterWrapperStyle.scss";
-import "./FooterSubcribe/SubscribeFooter.scss";
-import "bootstrap/dist/css/bootstrap.css";
+import Categories from "./Components/Categories";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div>
-      <WrapperNav />
-      <FooterWrapper />
-    </div>
+    <BrowserRouter className="body-container">
+      <Routes>
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
