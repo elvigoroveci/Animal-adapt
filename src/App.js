@@ -1,18 +1,14 @@
-import './App.css';
-import Adoptation from './Components/Adoptation/Adoptation';
+import Categories from "./Components/Categories";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className='app'>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Adoptation />}>
-
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter className="body-container">
+      <Routes>
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
