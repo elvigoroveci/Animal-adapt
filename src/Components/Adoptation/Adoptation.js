@@ -3,29 +3,22 @@ import "./Adoptation.scss"
 
 
 const Adoptation = () =>{
-    const [userInput,setUserInput] = useState('');
-    const [Popup, setPopup] = useState(false);
-    const [DataInputArr, setDataInputArr] = useState([]);
-    const [DataInput, SetDataInput] = useState({
+    const [Popup ,setPopup] = useState(false)
+    const [userInput, setUserInput] = useState({
         name:"",
         lastname:"",
-        email: "",
+        email:"",
         location: "",
         age: 0
-    });
+    })
 
-    const ChangeEvent = (e) =>{
-        SetDataInput({...DataInput,[e.target.name]: e.target.value,[e.target.lastname]:e.target.value,[e.target.email]:e.target.value})
+    const handleUserInput = (e) =>{
+        setUserInput({ ...userInput,[e.target.name]:e.target.value })
+    }
+    const submithandler = (e) =>{
+        alert("form submited")
     }
 
-    let {name,lastname,email,location,age} = DataInput;
-
-    const ChangeHandle = () =>{
-        setDataInputArr([...DataInputArr,{name,lastname,email,location,age}])
-        console.log(DataInputArr)
-        console.log(DataInput)
-        SetDataInput({name:"",lastname:"",email: "",location: "",age: ""})
-    }
 
     return (
         <>
@@ -36,15 +29,15 @@ const Adoptation = () =>{
         </div>    
             {Popup ? 
             <div className="PopUp"> 
-                <form className="UserData" >
-                    <input type="text"  placeholder="Name" name='Name'/>
-                    <input type="text"  placeholder="Lastname" name='Lastname'/>
-                    <input type="text"  placeholder="Email" name='Email' />
-                    <input type="text"  placeholder="Enter Your Location" name='Location' />
-                    <input type="number" placeholder="Age" name='Age'/>
+                <form className="UserData" onSubmit={submithandler}>
+                    <input type="text"  placeholder="Name" name='Name' value={userInput.name}  onChange={handleUserInput}/>
+                    <input type="text"  placeholder="Lastname" name='Lastname' onChange={handleUserInput}/>
+                    <input type="text"  placeholder="Email" name='Email' onChange={handleUserInput}/>
+                    <input type="text"  placeholder="Enter Your Location" name='Location' onChange={handleUserInput}/>
+                    <input type="number" placeholder="Age" name='Age'onChange={handleUserInput}/>
                     <div className="buttons">
                         <button className="ClosePopup" onClick={() => setPopup(false)}>Cancel</button>    
-                        <button type="submit" className="Adopt" onClick={ChangeHandle}>Adopt</button>
+                        <button type="submit" className="Adopt">Adopt</button>
                     </div>
                 </form>    
             </div> 

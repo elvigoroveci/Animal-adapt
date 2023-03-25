@@ -13,10 +13,10 @@ const AddCategoryPopup = (props) => {
         props.showPopup();
     };
 
- 
+
 
     console.log(userInput);
-    
+
     return (
         <div className="popup">
             <h3>Select new category</h3>
