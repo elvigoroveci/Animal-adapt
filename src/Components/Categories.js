@@ -15,7 +15,7 @@ const Categories = () => {
     // fix an error on the console for using conditional on classname
     const [makeBlur, setMakeBlur] = useState('');
 
-    const [categories, setCatedories] = useState([
+    const [categories, setCategories] = useState([
         {
             id: 1,
             logo: <PetsIcon />,
@@ -35,7 +35,7 @@ const Categories = () => {
 
     const handleAddCategory = (newCategory) => {
         const newItem = { id: categories.length + 1, logo: 'doing', title: newCategory }
-        setCatedories([...categories, newItem]);
+        setCategories([...categories, newItem]);
         console.log(categories);
     };
     // set popup true to show AddCategoryPopup
