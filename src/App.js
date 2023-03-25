@@ -1,9 +1,7 @@
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
 import Categories from "./Components/Categories";
 import Adoptation from "./Components/Adoptation/Adoptation";
-import SingleAnimalPage from './SingleAnimalPage/SingleAnimalPage';
+import SingleAnimalPage from './Components/SingleAnimalPage/SingleAnimalPage';
 
 
 function App() {
