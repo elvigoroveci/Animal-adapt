@@ -1,41 +1,23 @@
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Categories from "./Components/Categories";
+import Adoptation from "./Components/Adoptation/Adoptation";
 import SingleAnimalPage from './SingleAnimalPage/SingleAnimalPage';
-import AnimalCreationPopup from './Components/AnimalCreationPopup/AnimalCreationPopup';
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
-
-
 
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-
+    <div className="body-container">
+    <BrowserRouter >
       <Routes>
-          <Route path="/" element={<Layout />}>
-              <Route index element={<AnimalCreationPopup />}/>
-              <Route path element={<AnimalCreationPopup />}/>
-              <Route path element={<SingleAnimalPage />}/>
-
-          </Route>
-            
-
-       
-         
-         </Routes>
-         
-      
-      
-      </BrowserRouter>
-       
+        <Route index element={<Adoptation />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/animals/:id" element={<SingleAnimalPage />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
 
 export default App;
-
-
-
-//  <AnimalCreationPopup />
-//          <SingleAnimalPage />
