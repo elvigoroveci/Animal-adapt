@@ -1,0 +1,138 @@
+$primary-color: #003459;
+$neutral-color: #fdfdfd;
+$border-radius: 13.2183px;
+
+.Subscribe-Component-Total {
+  background: $primary-color;
+  border-radius: $border-radius;
+  width: 974.85px;
+  height: 112.87px;
+  flex: none;
+
+  .Component-Subscribe {
+    width: 974.85px;
+    height: 112.87px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 26.4366px;
+
+    .Text-Box-Subscribe {
+      width: 321.37px;
+      height: 60px;
+      position: absolute;
+
+      .Text-Inside-Subscribe {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19.8275px;
+        line-height: 30px;
+        text-transform: capitalize;
+        color: $neutral-color;
+      }
+    }
+
+    .Email-Subscribe-Total {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 9.91373px;
+      gap: 9.91px;
+      width: 584.08px;
+      height: 59.96px;
+      background: #ffffff;
+      border-radius: 11.566px;
+
+      .Email-Input-Subscribe {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 11.566px 23.132px;
+        gap: 8.26px;
+        width: 419.68px;
+        height: 40.13px;
+        background: #ffffff;
+        box-sizing: border-box;
+        border: 0.826144px solid #99a2a5;
+        border-radius: 6.60916px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+
+      .Subscribe-Now-Button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 11.566px 23.132px 8.26144px;
+        gap: 8.26px;
+        width: 134.66px;
+        height: 39.83px;
+        background: $primary-color;
+        border-radius: 6.60916px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        border-color: #99a2a5;
+
+        .Text-Inside-Subscribe-Now-Button {
+          width: 90px;
+          height: 20px;
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13.2183px;
+          line-height: 20px;
+          display: flex;
+          align-items: flex-end;
+          color: $neutral-color;
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+}
+.Total-Mini-Menu-Social-Media {
+  width: 974.85px;
+  height: 92.27px;
+}
+.Mini-Menu-Social-Media {
+  width: 974.85px;
+  height: 92.27px;
+  align-items: center;
+}
+.Mini-Menu-Footer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: inherit;
+  span {
+    margin-right: 50px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding-inline-end: inherit;
+  span:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.icon {
+  height: 23.85px;
+  width: 24px;
+}
+.contact-text-fix {
+  margin-right: 0px;
+}

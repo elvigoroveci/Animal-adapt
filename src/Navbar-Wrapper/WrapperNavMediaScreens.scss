@@ -1,0 +1,119 @@
+$desktop: 1200px;
+$laptop: 992px;
+$tablet: 768px;
+$phone: 480px;
+// @media screen and (min-width: 1366px) and (max-width: 8888px) {
+//   .navbar__toggle {
+//     display: none;
+//   }
+//   .Nav-Bar {
+//     margin-left: 0.2%;
+//   }
+// }
+
+@media screen and (max-width: 1366px) and (min-width: $desktop) {
+  .Nav-Bar {
+    display: flex;
+    justify-content: center;
+  }
+}
+.Text-Wrapper {
+  margin-left: 8.5%;
+}
+
+@media screen and (max-width: $desktop) and ($tablet) {
+  .Nav-Bar {
+    justify-content: center;
+  }
+}
+.Text-Wrapper {
+  padding-left: 3%;
+  padding-top: 0%;
+}
+
+.Under-Navbar {
+  .Text-Wrapper {
+    padding-left: 4%;
+  }
+}
+@media screen and (max-width: $tablet) and (min-width: 0rem) {
+  .Nav-Bar {
+    display: flex;
+    padding-left: 0%;
+  }
+  .Under-Navbar {
+    flex-direction: column;
+
+    .Text-Wrapper {
+      padding-top: 0%;
+      margin-left: 3%;
+      h1 {
+        width: 274px;
+        height: 47px;
+        left: 12.65px;
+        top: 107.74px;
+
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 35.309px;
+        line-height: 46px;
+        /* or 130% */
+
+        text-transform: capitalize;
+
+        /* Primary Color/Dark Blue 80 */
+
+        color: #002a48;
+
+        transform: rotate(-0.2deg);
+      }
+      h2 {
+        width: 211px;
+        height: 30px;
+        left: 12.8px;
+        top: 153.79px;
+
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21.4924px;
+        line-height: 29px;
+        /* identical to box height, or 136% */
+
+        text-transform: capitalize;
+
+        /* Primary Color/Dark Blue 80 */
+
+        color: #002a48;
+
+        transform: rotate(-0.2deg);
+      }
+      p {
+        width: 293.22px;
+        height: 42px;
+        left: 12.93px;
+        top: 192.17px;
+
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 9.21105px;
+        line-height: 14px;
+        /* or 150% */
+
+        /* Neutral Color/80 */
+
+        color: #242b33;
+
+        transform: rotate(-0.2deg);
+      }
+    }
+    .Photo-Wrapper {
+      width: 50%;
+      height: 40.1%;
+      padding-bottom: 0%;
+      padding-left: 0%;
+    }
+  }
+}
