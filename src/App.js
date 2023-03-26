@@ -3,6 +3,8 @@ import Categories from "./Components/Categories";
 import Adoptation from "./Components/Adoptation/Adoptation";
 import SingleAnimalPage from './Components/SingleAnimalPage/SingleAnimalPage';
 import MenuMain from "./Navbar-Wrapper/MenuMain";
+import WrapperNav from "./Navbar-Wrapper/WrapperNav";
+
 
 
 function App() {
@@ -10,11 +12,11 @@ function App() {
     <div className="body-container">
       <BrowserRouter >
        <Routes>
-        <Route index element={<Adoptation />} />
+        <Route index element={<WrapperNav/> } />
         <Route path="/" element={<MenuMain/>} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/animals/:id" element={<SingleAnimalPage />} />       
-        <Route path="/:petsId" element={ <Adoptation/>} />
+        <Route path="/pets" element={<Adoptation />} />
        </Routes>
      </BrowserRouter>
     </div>

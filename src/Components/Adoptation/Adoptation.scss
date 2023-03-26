@@ -12,11 +12,11 @@ $font: 'SVN-Gilroy';
 $text-btn-color: #FDFDFD;
 
 .PopUp{
-    background-color: rgb(238, 238, 238);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
+    background-color: #e9e9e9da;
 }
 .AdoptBtn{
     font-family:$font;
@@ -27,7 +27,24 @@ $text-btn-color: #FDFDFD;
     color: $text-btn-color;
     font-family: 'SVN-Gilroy';
     border: none;
-    margin-top: 432px;
+}
+.Adopt{
+    font-family: $font;
+   width: 97.55px;
+   height: 29.36px;
+   background-color: $primary-color;
+   border-radius: $button-BorderRadius;
+   color: $text-btn-color;
+  font-family: 'SVN-Gilroy';
+   border: none;
+}
+input{
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    border-radius: $button-BorderRadius;
+    border: 1px solid rgb(237, 237, 237);
+    box-shadow: $box-shadow;
 }
 .UserData{
     width: 400px;
@@ -41,37 +58,28 @@ $text-btn-color: #FDFDFD;
     flex-direction: column;
     align-items: center;
     padding: 70px ;
-}
+    border: 1px solid black;
 
-input{
-    width: 250px;
-    height: 40px;
-    border-radius: $button-BorderRadius;
-    text-align: center;
-    border: 1px solid rgb(237, 237, 237);
-    margin-top: 15px;
-    box-shadow: $box-shadow;
+}
+.ClosePopup{
+   width: 97.55px;
+   height: 29.36px;
+  border-radius: $button-BorderRadius;
+  border: 1.23px $primary-color;
+   color: $primary-color ;
+    margin-right: 10px;
+    border: 1px solid black;
 }
 .buttons{
-    display: flex;
-    flex-direction: row;
-    padding: 30px;
+    margin-top: 70px;
 }
-.Adopt{
-    font-family: $font;
-    width: 97.55px;
-    height: 29.36px;
+.Deletebtn{
+    font-family:$font;
+    width: 147.55px;
+    height: 43.36px;
     background-color: $primary-color;
     border-radius: $button-BorderRadius;
     color: $text-btn-color;
     font-family: 'SVN-Gilroy';
     border: none;
-}
-.ClosePopup{
-    width: 97.55px;
-    height: 29.36px;
-    border-radius: $button-BorderRadius;
-    border: 1.23px $primary-color;
-    color: $primary-color ;
-    margin-right: 10px;
 }

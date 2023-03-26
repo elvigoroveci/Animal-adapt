@@ -17,9 +17,16 @@ $phone: 480px;
 
   .nav .navbar__login {
   }
+  .navbar__searchii{
+    display: none;
+  }
+
 }
 @media screen and (max-width: $desktop) and (min-width: $tablet) {
   .navbari {
+  }
+  .navbar__searchii{
+    display: none;
   }
   .navbar__toggle {
     display: none;

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 const PetCards = ({ pets }) => {
   console.log("Pets:", pets);
@@ -15,3 +13,4 @@ const PetCards = ({ pets }) => {
     </div>
   );
 };
+export default PetCards;
