@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import "./CardStyle.scss";
 
 const server_path = "http://localhost:5000";
@@ -22,7 +23,9 @@ const HomePage = () => {
   console.log(pets);
 
   return (
+    <>
     <div className="Cards-Api-Total">
+
       {pets.map((pet) => (
         <div className="cardsoo" key={pet.id}>
           <div className="image-cards">
@@ -34,8 +37,9 @@ const HomePage = () => {
             <p className="fillCard">{pet.age} ∞∞</p>
           </div>
         </div>
-      ))}
+        ))}
     </div>
+        </>
   );
 };
 

@@ -1,4 +1,4 @@
-import "../Categories.scss";
+import "./Categories.scss";
 
 const CategoryGrid = (cards) => {
 

@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from "react";
+import { Icon } from "@mui/material";
+import('./Categories.scss');
 
 const CategoryCard = (props) => {
   const [selectedIndices, setSelectedIndices] = useState([]);
   const [lastSelectedIndex, setLastSelectedIndex] = useState(null);
 
   const cardRef = useRef(null);
+
+  console.log(props);
 
   const handleSelectedCategory = (index) => {
     setSelectedIndices([index]);
@@ -26,7 +30,7 @@ const CategoryCard = (props) => {
 
   return (
     <div className="categories-section" ref={cardRef}>
-      {props.category.map((item, id) => {
+      {props.category.data.map((item, id) => {
         const isSelected = selectedIndices.includes(id);
         const isLastSelected = lastSelectedIndex === id;
         return (
@@ -35,8 +39,8 @@ const CategoryCard = (props) => {
             key={id}
             onClick={() => handleSelectedCategory(id)}
           >
-            <div>{item.logo}</div>
-            <h3>{item.title}</h3>
+            <Icon component={item.logo} />
+            <h5 className="item-category">{item.category}</h5>
           </div>
         );
       })}

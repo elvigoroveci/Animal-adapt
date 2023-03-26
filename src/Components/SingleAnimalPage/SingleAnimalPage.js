@@ -10,12 +10,10 @@ import { Card } from "react-bootstrap";
 
 
 
-
 const SingleAnimalPage =() =>{
     
          return (
             <div className="container"> {/* kontaineri kryesor, permban te gjithe elementet */}
-
                 <div className="row border rounded mt-5"> {/* Permban Carouselin */}
                     <div className="col-sm mt-3">
                         <div className = "carousel"

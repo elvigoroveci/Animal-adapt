@@ -1,0 +1,91 @@
+.Cards-Api-Total {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1366px;
+}
+.cardsoo {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 6.60916px 6.60916px 0px;
+  gap: 6.61px;
+  width: 231.32px;
+  height: 313.06px;
+  left: 107.4px;
+  top: 698.09px;
+  background: #fdfdfd; /* Neutral Color/00 */
+  box-shadow: 0px 3.30458px 23.132px -1.65229px rgba(0, 0, 0, 0.08);
+  border-radius: 9.91373px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h4 {
+    padding-left: 3%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 204.88px;
+    height: 20px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13.2183px;
+    line-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    color: #00171f;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+}
+.RracaCard {
+  padding-left: 3%;
+  margin-top: 0%;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9.91373px;
+  line-height: 15px;
+  color: #667479;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.fillCard {
+  padding-left: 3.5%;
+  width: 204.88px;
+  height: 17px;
+
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11.566px;
+  line-height: 17px;
+  display: flex;
+  align-items: flex-end;
+  color: #00171f;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+.cardsoo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 3.3px;
+  width: 204.88px;
+  height: 58.61px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.image-cards {
+  padding-left: 3%;
+  width: 218.1px;
+  height: 218.1px;
+}
