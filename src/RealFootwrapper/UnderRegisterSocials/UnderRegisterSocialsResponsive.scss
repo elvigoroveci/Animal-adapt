@@ -1,0 +1,108 @@
+@media screen and (max-width: 940px) and (min-width: 800px) {
+  /* styles for tablet screens */
+  .Under-Subscribe-Socials {
+    display: flex;
+    gap: 39.4%;
+    width: 100%;
+    background: blue;
+  }
+}
+
+@media screen and (max-width: 799px) and (min-width: 700px) {
+  .Under-Subscribe-Socials {
+    gap: 25.4%;
+  }
+}
+@media screen and (max-width: 699px) and (min-width: 600px) {
+  .Under-Subscribe-Socials {
+    gap: 15.4%;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 500px) {
+  .Under-Subscribe-Socials {
+    display: flex;
+
+    gap: 17%;
+    background: blue;
+  }
+  .Under-Subscribe-Menu {
+    display: flex;
+    gap: 1.0625rem;
+    a {
+      text-decoration: none;
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 9.2183px;
+      line-height: 20px;
+      color: #00171f;
+    }
+  }
+
+  .Logo-Subscribe-Socials {
+    display: flex;
+    gap: 30px;
+    image {
+      height: 17px;
+      width: 19px;
+    }
+  }
+}
+@media screen and (max-width: 499px) and (min-width: 350px) {
+  .Under-Subscribe-Socials {
+    display: flex;
+
+    gap: 17%;
+    background: blue;
+  }
+  .Under-Subscribe-Menu {
+    display: flex;
+    gap: 0.5rem;
+    a {
+      text-decoration: none;
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 9.2183px;
+      line-height: 10px;
+      color: #00171f;
+    }
+  }
+  .Logo-Subscribe-Socials {
+    display: flex;
+    gap: 4%;
+    image {
+      height: 10px;
+      width: 12px;
+    }
+  }
+}
+@media screen and (max-width: 349px) and (min-width: 200px) {
+}
+.Under-Subscribe-Socials {
+  display: flex;
+
+  gap: 12%;
+  background: blue;
+}
+.Under-Subscribe-Menu {
+  display: flex;
+  gap: 0.5rem;
+  a {
+    text-decoration: none;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9.2183px;
+    line-height: 10px;
+    color: #00171f;
+  }
+}
+.Logo-Subscribe-Socials {
+  display: flex;
+  gap: 4%;
+  image {
+    height: 10px;
+    width: 12px;
+  }
+}

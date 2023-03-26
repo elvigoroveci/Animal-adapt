@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./CardStyle.scss";
-
+import "./CardsHomePageResponsive.scss";
 
 const server_path = "http://localhost:5000";
 

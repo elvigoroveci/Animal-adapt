@@ -1,0 +1,107 @@
+/* Styles for screens 1366px and above */
+/* Styles for screens 1366px and above */
+// @media screen and (min-width: 1366px) {
+// }
+
+// /* Styles for screens between 992px and 1365px */
+// @media screen and (min-width: 992px) and (max-width: 1200px) {
+// }
+
+// /* Styles for screens between 768px and 991px */
+// @media screen and (min-width: 768px) and (max-width: 991px) {
+// }
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+  .Text-Left-Subscribe {
+    width: 28%;
+    height: 80%;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 84%;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: #fdfdfd;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  // padding-right: 1%;
+  // margin-top: 2.4%;
+  // margin-left: 0.4%;
+  // padding-left: 1%;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // gap: 9.91px;
+  // width: 60%;
+  // height: 59.96px;
+
+  // background: #ffffff;
+  // border-radius: 11.566px;
+}
+.Email-Input-Subscribe {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  //   padding: 11.566px 23.132px;
+  gap: 3%;
+  width: 50%;
+  height: 40.13px;
+  background: #ffffff;
+  border: 0.826144px solid #99a2a5;
+  border-radius: 6.60916px;
+}
+.Email-Input-Button {
+  padding-right: 1%;
+  margin-top: 3.4%;
+  margin-left: 0.4%;
+  padding-left: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9.91px;
+  width: 60%;
+  height: 59.96px;
+
+  background: #ffffff;
+  border-radius: 11.566px;
+}
+.Subscribe-Now-Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  //   padding: 11.566px 23.132px 8.26144px;
+
+  gap: 8.26px;
+  width: 50%;
+  height: 39.83px;
+  background: #003459;
+  border-radius: 6.60916px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+// @media screen and (min-width: 1px) and (max-width: 480px) {
+//   .Register-Now-Component-Total {
+//     display: column;
+//     flex-direction: column;
+//   }
+//   .Subscribe-Component-Total {
+//     display: column;
+//     flex-direction: column;
+//   }
+// }
+// @media screen and (min-width: 1px) and (max-width: 780px) {
+//   .Register-Now-Component-Total {
+//     display: column;
+//     flex-direction: column;
+//   }
+//   .Subscribe-Component-Total {
+//     display: column;
+//     flex-direction: column;
+//   }
+// }
