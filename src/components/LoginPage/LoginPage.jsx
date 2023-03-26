@@ -8,12 +8,57 @@ import vkSocial from "../../images/vk-social.png";
 import dogImg from "../../images/dog-img.jpg";
 
 const LoginPage = () => {
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    age: "",
+    phone: "",
+    city: "",
+    address: "",
+    password: "",
+  });
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
+  const [passwordError, setPasswordError] = useState(false);
+
+  // Define function to handle changes to input fields
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUser((prevState) => ({ ...prevState, [name]: value }));
   };
 
+  // Define function to handle form submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (passwordError) {
+      return;
+    }
+
+    // Send POST request to server with user data
+    fetch("/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Failed to register user");
+        }
+      })
+      .then((data) => {
+        console.log("User registered:", data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  // Render the login page
   return (
     <>
       <div className="register-page">
@@ -47,31 +92,57 @@ const LoginPage = () => {
           </div>
           <form>
             <div className="input-group">
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="email" placeholder="E-Mail" />
-              <input type="number" placeholder="Age" />
-              <input type="tel" placeholder="Phone Number" />
-              <input type="text" placeholder="City" />
-              <input type="text" placeholder="Adress" />
+              <input
+                type="text"
+                placeholder="Name"
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="email"
+                placeholder="E-Mail"
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="number"
+                placeholder="Age"
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                onChange={handleInputChange}
+              />
+              <input
+                type="text"
+                placeholder="City"
+                onChange={handleInputChange}
+              />
+              <input
+                type="text"
+                placeholder="Adress"
+                onChange={handleInputChange}
+              />
               <input
                 type="password"
                 placeholder="Password"
-                value={password}
-                onChange={handlePasswordChange}
+                onChange={handleSubmit}
               />
-              {password.length < 8 && (
-                <p className="error">
-                  *Password must contain at least 8 characters.
-                </p>
-              )}
             </div>
             <h2>
               <input className="checkbox" type="checkbox" />I agree to{""}
               <span>Terms</span> and{""} <span>Privacy Policy</span>
             </h2>
             <div className="buttons">
-              <button className="btn" type="submit">
+              <button className="btn" type="submit" onClick={handleSubmit}>
                 Sign Up
               </button>
               <h3>or</h3>
